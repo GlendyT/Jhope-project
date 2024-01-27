@@ -66,6 +66,7 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
               ))}
              </select>
               </div>
+              
               <div className="username2">
                 <label>Canciones</label>
                       <select 

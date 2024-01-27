@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   font-family: 'Flubber', sans-serif;
+  box-sizing: border-box;
+
 }
 
 .main video {
@@ -29,12 +31,11 @@
       background-color: rgba(23, 0, 0, 0.7);
   }
 }
-
-
 h1 {
-  font-size: 4em;
+  font-size: 2em;
   line-height: 1.1;
   text-transform: uppercase;
+  color: white;
 }
 
 button {
@@ -68,8 +69,6 @@ button:focus-visible {
 }
 img {
   height:300px;
-
-
 }
 /*DISEÑO DEL FORMULARIO*/
 .contenedor{
@@ -89,6 +88,8 @@ img {
   justify-content: center;
   margin: 30px;
   isolation: isolate;
+  top: 0;
+  left: 0;
 }
 
 .contenedor form {
@@ -130,7 +131,6 @@ img {
   transition: .5s;
   background: white;
 }
-
 /*second username*/
 .username2 input{
   width: 100%;
@@ -159,14 +159,41 @@ img {
 
 /*DISEÑO DE LA CARD*/
 .titulo-card{
-  width: 100%;
-  height: 50px;
   font-size: 5rem;
   color: white;
   cursor: pointer;
   text-transform: uppercase;
   text-align: center;
+  padding: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+.ticket {
+  display: block;
+  position: relative;
+  float: left;
+}
+.titulo-user{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: #f9f9f9;
+  font-size: 2rem;
+}
+
+.titulo-album{
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  color: #f9f9f9;
+  font-size: 2rem;
+}
+.titulo-song {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  color: #f9f9f9;
+  font-size: 2rem;
 }
 
 /*DISEÑO DEL BOTON*/
