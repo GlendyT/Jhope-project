@@ -58,15 +58,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #791212;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 img {
   height:300px;
 }
@@ -201,3 +192,23 @@ img {
   width: 15%;
   color: #f9f9f9;
 }
+
+@media screen and (max-width:1400px) {
+  img{
+    max-height: 25vh;
+  }
+  .contenedor {
+    width: 70%;
+    margin-top: 3rem;
+  }
+  .formulario{
+    width: 100%;
+  }
+}
+
+@media screen and ( max-width: 650px) {
+  .contenedor, .formulario{
+    width: 90%;
+  }
+}
+  
