@@ -14,6 +14,7 @@ function App() {
   return (
     <>
     <div className='App'>
+      <Background/>
 
       {
         !user.length > 0
