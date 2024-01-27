@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { rolas, rolasalbum } from "../Data/rolas"
+import hw from "../assets/hw.png"
 
 
 const Formulario = ({ setUser, setAlbu, setSong}) => {
@@ -23,9 +24,20 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
         setSong([cancion])
     } 
   return (
-    <div className="formulario">
- 
-        <h1>Welcome to my Hope World</h1>
+    <div className="contenedor">
+      <div className="formulario">
+        <h1>Logo</h1>
+      </div>
+      <div>
+        <picture>
+          <img 
+          src={hw}
+          typeof="image/png" 
+          alt="Titulo" 
+          className="pic"
+          />
+        </picture>
+      </div>
         <form 
           onSubmit={handleSubmit}
           >

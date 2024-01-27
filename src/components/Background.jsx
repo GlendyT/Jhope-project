@@ -1,4 +1,5 @@
 import React from "react"
+import jhope from "../assets/jhope2.mp4"
 import Hopeworld from "../assets/hope.webp"
 
 const Background = () => {
