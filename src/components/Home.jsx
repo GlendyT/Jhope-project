@@ -6,9 +6,9 @@ export  function Home({user, setUser, albu, song}) {
         setUser({})
     }
   return (
-    <div className="contenedor">
+    <div className="contenedor-ticket">
         <div className="titulo-card">HAPPY BIRTHDAY J-HOPE</div>
-        <div className="formulalrio">
+        <div className="">
           <h1>Here is your ticket to keep loving and supporting j-hope</h1>
         </div>
         <aside className="ticket">
@@ -23,7 +23,7 @@ export  function Home({user, setUser, albu, song}) {
           <div className="titulo-song">Location: {song}</div>
         </aside>
         
-        <div className="boton"> 
+        <div className="boton1"> 
         <button 
         onClick={handleLogout}>Cerrar Sesion</button>
         </div>
