@@ -1,6 +1,4 @@
-import jitb from "../assets/Jack in the Box.svg"
-import jitbhe from "../assets/Jack In The Box (HOPE Edition).svg"
-import hw from "../assets/HOPE WORLD.svg"
+
 
 export const rolas = [
   {id: "0", nombre:"Intro"},
@@ -27,19 +25,4 @@ export const rolas = [
   {id: "21", nombre:"Blue Side"},
   {id: "22", nombre:"Chicken Noodle Soup"},
   {id: "23", nombre:"on the street"},
-]
- 
-export const rolasalbum = [
-  {id:"0", 
-   nombre:"Hope World",
-   image: hw
-  },
-  {id:"1", 
-   nombre:"Jack In The Box",
-   image: jitb
-  },
-  {id:"2", 
-   nombre:"Jack In The Box (HOPE Edition)",
-   image: jitbhe
-  },
 ]
