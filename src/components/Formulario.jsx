@@ -46,7 +46,7 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
               type="text"
               value={nombre}
               onChange={e => setNombre(e.target.value)}
-              placeholder="Ingresa tu usuario de Twitter"
+              placeholder="Use your Twitter/X @username"
               />
               </div> 
             <div className="username2"> 
@@ -55,7 +55,7 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
               onChange={e => setAlbum(e.target.value)}
               value={album}
              >
-              <option value="" >Selecciona tu Album Favorito</option>
+              <option value="" >Choose your favorite Album</option>
               {rolasalbum.map(nombre => (
                 <option
                  key={nombre.nombre}
@@ -68,13 +68,13 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
               </div>
               
               <div className="username2">
-                <label>Canciones</label>
+                <label>Songs</label>
                       <select 
                        onChange={e => setCancion(e.target.value)}
                        value={cancion}
 
                       >
-                        <option value="">Selecciona tu Cancion Favorita</option>
+                        <option value="">Choose your favorite Song</option>
                         {rolas.map(nombre => (
                           <option
                            key={nombre.nombre}
@@ -88,7 +88,7 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
 
             <button>Generar Card</button>
         </form>
-        {error && <p>Es Necesario que llenes todos los campos</p>}
+        {error && <p className="error">All questions must be filled out</p>}
  
     </div>
   )
