@@ -1,17 +1,26 @@
 
-import card2 from "../assets/card2.jpg"
+//IMAGENES DE TICKETS
+import card from "../assets/ticket3.png"
+import card1 from "../assets/1.png"
+import card2 from "../assets/2.png"
+import card3 from "../assets/3.png"
+import card4 from "../assets/4.png"
+import card5 from "../assets/5.png"
+import card6 from "../assets/6.png"
 
-import HP from "../assets/HOPE WORLD.svg"
-import jitb from "../assets/Jack in the Box.svg"
-import jitbhe from "../assets/Jack In The Box (HOPE Edition).svg"
+
+//IMAGENES DE QR
+import HP1 from "../assets/HOPE-WORLD2.png"
+import jitb1 from "../assets/jitb1.png"
+import jitbhe1 from "../assets/jitbHE1.png"
 
 const diccionarioIconos = {
-  HopeWorld: HP,
-  JackInTheBox: jitb,
-  JackInTheBoxHOPEEdition: jitbhe
+  HopeWorld: HP1,
+  JackInTheBox: jitb1,
+  JackInTheBoxHOPEEdition: jitbhe1
 }
 
-export  function Home({user, setUser, albu, song, album}) {
+export  function Home({user, setUser, albu, song}) {
 
     const handleLogout = () => {
         setUser({})
@@ -24,30 +33,40 @@ export  function Home({user, setUser, albu, song, album}) {
         </div>
         <aside className="ticket">
             <img
-              src={card2}
+              src={card5}
               typeof="image/jpg" 
               alt="Card" 
               className="pic2"
             />
           <div className="ticket-inside"> 
-            <div className="titulo-user">Name: {user}</div>
+            <div className="titulo-user">
+              Name: <div className="titulo-user1"> {user}</div>
+              </div>
             <div className="titulo-album">
-              City : {albu}</div>
-            <div className="titulo-song">Location: {song}</div>
+              City: <div className="titulo-album1">{albu}</div>
+            </div>
+            <div className="titulo-song">
+              Location: <div className="titulo-song1"> {song}</div>
+            </div>
           </div>
 
           <img 
            src={diccionarioIconos[albu]}
            typeof="image/svg" 
            alt="Card" 
-           className="pic2"
+           className="pic3"
            />
         </aside>
-        
+      
         <div className="boton1"> 
         <button 
-        onClick={handleLogout}>Log Out</button>
-        </div>
+          >Download and Share</button></div>
+        <div className="boton2"> 
+        <button 
+          onClick={handleLogout}>Log Out</button> </div>
+
+        
+
     </div>
   )
 }
