@@ -3,15 +3,6 @@ import { rolas } from "../Data/rolas"
 import { Filtroalbum } from "./Filtroalbum"
 import hw from "../assets/hw.png"
 
-import HP from "../assets/HOPE WORLD.svg"
-import jitb from "../assets/Jack in the Box.svg"
-import jitbhe from "../assets/Jack In The Box (HOPE Edition).svg"
-
-const diccionarioIconos = {
-  HopeWorld: HP,
-  JackInTheBox: jitb,
-  JackInTheBoxHOPEEdition: jitbhe
-}
 
 
 const Formulario = ({ setUser, setAlbu, setSong}) => {
@@ -38,9 +29,7 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
   return (
     <div className="contenedor">
       <div className="formulario">
-        <h1>Logo</h1>
       </div>
-      <div>
         <picture>
           <img 
           src={hw}
@@ -49,6 +38,7 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
           className="pic"
           />
         </picture>
+        <div>
       </div>
        <div className="username"> 
            <input 
@@ -58,13 +48,10 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
               placeholder="Use your Twitter/X @username"
               />
        </div> 
-        <div className="username2"> 
          <Filtroalbum
              album={album}
              setAlbum={setAlbum}
          />
-        </div>
-
         <form
           onSubmit={handleSubmit}
           >
@@ -85,9 +72,9 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
                         ))}
                       </select>
               </div>
-              
-
-            <button>Generate Card</button>
+              <button
+            >Generate Card</button>
+            
         </form>
         {error && <p className="error">All questions must be filled out</p>}
  
@@ -96,19 +83,3 @@ const Formulario = ({ setUser, setAlbu, setSong}) => {
 }
 
 export default Formulario
-
-
-/*             <select
-              onChange={e => setAlbum(e.target.value)}
-              value={album}
-             >
-              <option value="" >Choose your favorite Album</option>
-              {rolasalbum.map(nombrealbum => (
-                <option
-                 key={nombrealbum.nombrealbum}
-                 value={nombrealbum.nombrealbum}
-                >
-                  {nombrealbum.nombrealbum}
-                </option>
-              ))}
-             </select>*/

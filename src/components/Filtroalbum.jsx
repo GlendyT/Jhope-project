@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react"
+
 
 export const Filtroalbum = ({album, setAlbum}) => {
   return (
-    <div>
-        <form>
-            <div>
+    <div className="username2" >
+        <form >
                 <label>Album</label>
                 <select
                  value={album}
@@ -15,8 +14,8 @@ export const Filtroalbum = ({album, setAlbum}) => {
                     <option value="JackInTheBox">Jack In The Box</option>
                     <option value="JackInTheBoxHOPEEdition">Jack In The Box (HOPE Edition) </option>
                 </select>
-            </div>
-        </form>
-    </div>
+            
+         </form>
+        </div>
   )
 }

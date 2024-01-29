@@ -60,21 +60,13 @@ button:focus-visible {
 
 img {
   height:300px;
+  opacity: 1;
 }
 /*DISEÑO DEL FORMULARIO*/
 .contenedor{
-  /*
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  opacity: 0.8;
-  border-radius: 10px;
-  padding: 1rem;*/
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
   justify-content: center;
   margin: 30px;
@@ -82,67 +74,43 @@ img {
   top: 0;
   left: 0;
 }
-
-
+/*
 .contenedor form {
   padding: 0 40px;
   box-sizing: border-box;
   border-bottom-color: #4f066c;
-}
+}*/
+
 /*diseño del logo*/
 .formulario{
   position: absolute;
   overflow: hidden;
-  height: 1px;
-  width: 1px;
+  display: flex;
+  flex-direction: column;
   margin: -1px;
-  padding: 0;
-  border: 0;
 }
+/*
 .pic{
   justify-content: center;
-}
+}*/
 /*first username*/
+.username {
+  width:80%;
+  text-align: center;
+}
 .username input{
-  width: 100%;
-  font-size: 18px;
-  padding: 14px;
-  border-radius: 10px;
-  margin-bottom: 20px; 
-  background: white;  
-  text-align: center;
-}
-
-.username label{
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  color: #fefcfc;
-  transform: translateY(-50%);
-  font-size: 16px;
-  pointer-events: none;
-  transition: .5s;
-  background: white;
-  text-align: center;
-}
-/*second username*/
-.username2 input{
-  width: 100%;
-  padding: 0 5px;
+  width: 24%;
   height: 40px;
   font-size: 16px;
   border: none;
-  background: none;
-  outline: none;
   text-align: center;
+  border-radius: 10px;
 }
+/*second username*/
 
 .username2 label{
   color:#ffffff;
   font-family: "Lato", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  margin: 15px 0;
 }
 .username2 select {
   width: 100%;
@@ -152,30 +120,14 @@ img {
   margin-bottom: 20px;   
 }
 .username2 option {
-  width: 100%;
-  padding: 0 5px;
-  height: 40px;
-  font-size: 16px;
-  border: none;
-  background: none;
-  outline: none;
   text-align: center;
 }
 
 /*DISEÑO DE LA CARD*/
 .contenedor-ticket{
-  /*
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  opacity: 0.8;
-  border-radius: 10px;
-  padding: 1rem;*/
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
   justify-content: center;
   margin: 30px;
@@ -198,28 +150,66 @@ img {
   position: relative;
   float: left;
 }
-
+.ticket-inside {
+  display: flex;
+  flex-direction: column;
+}
 .titulo-user{
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 11%;
+  left: 8%;
   color: #f9f9f9;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.titulo-user1{
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  color: #f9f9f9;
+  font-size: 2.2rem;
+  font-weight: bolder;
 }
 
 .titulo-album{
   position: absolute;
-  top: 25%;
-  left: 5%;
+  top: 30%;
+  left: 8%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.titulo-album1{
+  position: absolute;
+  top: 85%;
+  left: 1%;
   color: #f9f9f9;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight:bolder;
 }
 .titulo-song {
   position: absolute;
-  top: 50%;
-  left: 5%;
+  top: 48%;
+  left: 8%;
   color: #f9f9f9;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.titulo-song1{
+    top: 65%;
+    left: 1%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+.pic3{
+  position: absolute;
+  top: 13%;
+  width: 165px;
+  height: 165px;
+  left: 72%;
+  border-radius: 20px;
 }
 /*DISEÑO DEL BOTON*/
 .boton1 {
@@ -227,6 +217,19 @@ img {
   height: 50px;
   border: 1px solid;
   background: #38004b;
+  border-radius: 25px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.boton2 {
+  position: absolute;
+  bottom: 25px;
+  width: 20%;
+  height: 50px;
+  border: 1px solid;
+  background: #46026a;
   border-radius: 25px;
   font-size: 20px;
   color: white;
@@ -242,10 +245,19 @@ img {
 @media screen and (max-width:1400px) {
   img{
     max-height: 25vh;
+
   }
   .contenedor {
-    width: 70%;
-    margin-top: 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    isolation: isolate;
+    top: 0;
+    left: 0;
   }
   .formulario{
     width: 100%;
@@ -282,38 +294,12 @@ img {
     width: inherit;
     font-size: 0.5rem;
   }
+  
+/*ESTILO CARD*/
 
-  .titulo-card{
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 3rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
- h1 {
-  font-size: 1rem;
-  text-align: center;
- }
- .ticket {
-  display: block;
-  position: relative;
-  float: left;
-}
 .contenedor-ticket{
-  /*
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  opacity: 0.8;
-  border-radius: 10px;
-  padding: 1rem;*/
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
   justify-content: center;
   margin: 30px;
@@ -321,65 +307,101 @@ img {
   top: 0;
   left: 0;
 }
-.pic2{
-  max-width: 100%;
+  .titulo-card{
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bolder;
+ }
+
+.ticket {
+  display: block;
+  position: relative;
+  float: left;
+}
+.ticket-inside {
+  display: flex;
+  flex-direction: column;
 }
 .titulo-user{
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 15%;
+  left: 8%;
   color: #f9f9f9;
   font-size: 1rem;
+  font-weight: bolder;
+}
+.titulo-user1{
+  position: absolute;
+  top: 70%;
+  left: 1%;
+  color: #f9f9f9;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 .titulo-album{
   position: absolute;
-  top: 25%;
-  left: 5%;
+  top: 30%;
+  left: 8%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.titulo-album1{
+  position: absolute;
+  top: 90%;
+  left: 1%;
   color: #f9f9f9;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  font-weight:bolder;
 }
 .titulo-song {
   position: absolute;
-  top: 50%;
-  left: 5%;
+  top: 48%;
+  left: 8%;
   color: #f9f9f9;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
-.boton1 {
-  border: 1px solid;
-  background: #38004b;
-  border-radius: 25px;
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  text-transform: uppercase;
+.titulo-song1{
+    top: 50%;
+    left: 1%;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bolder;
+  }
+
+.pic3{
+  position: absolute;
+  top: 25%;
+  width: 70px;
+  height: 70px;
+  left: 72%;
+  border-radius: 8px;
 }
 }
 
-@media screen and ( max-width: 650px) {
+@media screen and ( max-width: 600px) {
   .contenedor, .formulario{
-    width: 90%;
+    width: 85%;
   }
   img{
     max-height: 25vh;
   }
   .username input{
-    width: 100%;
     font-size: 1rem;
-    padding: 14px;
     border-radius: 10px;
     margin-bottom: 20px; 
     background: white; 
-  }
-  .username2 input{
-    width: 100%;
-    padding: 0 5px;
-    height: 40x;
-    font-size: 1rem;
-    border: none;
-    background: none;
-    outline: none;
   }
   .username2 label{
     top: 50%;
@@ -389,6 +411,10 @@ img {
     font-size: 16px;
     pointer-events: none;
     transition: .5s;
+    
+  }
+  .username2 option{
+    text-align: center;
   }
   .boton{
     position: absolute;
@@ -396,6 +422,7 @@ img {
     width: inherit;
     font-size: 0.5rem;
   }
+  /*ESTILOS CARD*/
   .titulo-card{
     font-size: 1rem;
     color: white;
@@ -404,6 +431,7 @@ img {
     text-align: center;
     padding: 3rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
   }
    h1 {
     font-size: 1rem;
@@ -415,15 +443,6 @@ img {
     float: left;
   }
   .contenedor-ticket{
-    /*
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    opacity: 0.8;
-    border-radius: 10px;
-    padding: 1rem;*/
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -436,41 +455,58 @@ img {
   }
   .pic2{
     max-width: 100%;
+
   }
   .titulo-user{
     position: absolute;
-    top: 5%;
-    left: 5%;
+    top: 13%;
+    left: 8%;
     color: #f9f9f9;
-    font-size: 1rem;
+    font-size: 0.7rem;
+  }
+  .titulo-user1{
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    color: #f9f9f9;
+    font-size: 0.9rem;
   }
   
   .titulo-album{
     position: absolute;
-    top: 25%;
-    left: 5%;
+    top: 30%;
+    left: 8%;
     color: #f9f9f9;
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+  .titulo-album1{
+    position: absolute;
+    top: 70%;
+    left: -4%;
+    color: #f9f9f9;
+    font-size: 0.75rem;
   }
   .titulo-song {
     position: absolute;
-    top: 50%;
-    left: 5%;
+    top: 45%;
+    left: 8%;
     color: #f9f9f9;
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+  .titulo-song1 {
+    top: 70%;
+    left: -1%;
+    color: #f9f9f9;
+    font-size: 0.7rem;
   }
   .boton1 {
-    position: absolute;
-    bottom: 5px;
     width: 50%;
     height: 50px;
-    border: 1px solid;
-    background: #38004b;
-    border-radius: 25px;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-    text-transform: uppercase;
+  }
+  .boton2 {
+    bottom: 15px;
+    width: 50%;
+    height: 50px;
   }
 }
 
