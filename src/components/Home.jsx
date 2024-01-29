@@ -1,6 +1,5 @@
 
 //IMAGENES DE TICKETS
-import card from "../assets/ticket3.png"
 import card1 from "../assets/1.png"
 import card2 from "../assets/2.png"
 import card3 from "../assets/3.png"
