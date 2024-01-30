@@ -6,12 +6,13 @@ import card3 from "../assets/3.png"
 import card4 from "../assets/4.png"
 import card5 from "../assets/5.png"
 import card6 from "../assets/6.png"
-
-
 //IMAGENES DE QR
 import HP1 from "../assets/HOPE-WORLD2.png"
 import jitb1 from "../assets/jitb1.png"
 import jitbhe1 from "../assets/jitbHE1.png"
+//IMPORTS PARA DESCARGAR IMAGEN
+import { useRef } from "react"
+import { toPng } from "html-to-image"
 
 const diccionarioIconos = {
   HopeWorld: HP1,
@@ -20,6 +21,21 @@ const diccionarioIconos = {
 }
 
 export  function Home({user, setUser, albu, song}) {
+
+  const elementRef = useRef(null);
+
+  const htmlToImageConvert = () => {
+    toPng(elementRef.current, { cacheBust: false})
+    .then((dataUrl) => {
+      const link = document.createElement("a");
+      link.download = "Hobipalooza";
+      link.href = dataUrl;
+      link.click();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  };
 
     const handleLogout = () => {
         setUser({})
@@ -30,7 +46,10 @@ export  function Home({user, setUser, albu, song}) {
         <div className="">
           <h1>Here is your ticket to keep loving and supporting j-hope</h1>
         </div>
-        <aside className="ticket">
+        <aside 
+        className="ticket"
+        ref={elementRef}
+        >
             <img
               src={card5}
               typeof="image/jpg" 
@@ -59,6 +78,7 @@ export  function Home({user, setUser, albu, song}) {
       
         <div className="boton1"> 
         <button 
+        onClick={htmlToImageConvert}
           >Download and Share</button></div>
         <div className="boton2"> 
         <button 

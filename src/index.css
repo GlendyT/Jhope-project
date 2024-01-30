@@ -74,13 +74,6 @@ img {
   top: 0;
   left: 0;
 }
-/*
-.contenedor form {
-  padding: 0 40px;
-  box-sizing: border-box;
-  border-bottom-color: #4f066c;
-}*/
-
 /*diseño del logo*/
 .formulario{
   position: absolute;
@@ -89,10 +82,7 @@ img {
   flex-direction: column;
   margin: -1px;
 }
-/*
-.pic{
-  justify-content: center;
-}*/
+
 /*first username*/
 .username {
   width:80%;
@@ -240,7 +230,7 @@ img {
   color: white;
 }
 
-/*MEDIA QUERIES  PARA RESPONSIVIDAD*/
+
 
 @media screen and (max-width:1400px) {
   img{
@@ -509,4 +499,152 @@ h1{
     height: 50px;
   }
 }
+
+
+
+
+@media screen and ( max-width: 1024px) {
+  .contenedor, .formulario{
+    width: 95%;
+    height: 90%;
+  }
+  .contenedor {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    isolation: isolate;
+    top: 0;
+    left: 0;
+  }
+  img{
+    max-height: 40vh;
+  }
+  .username {
+    width:36.6%;
+  }
+  .username input{
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-bottom: 20px; 
+    background: white; 
+  }
+  .username2 label{
+    top: 50%;
+    left: 5px;
+    color: #fffefe;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+    
+  }
+  .username2 option{
+    text-align: center;
+  }
+  .boton{
+    position: absolute;
+    bottom: 25px;
+    width: inherit;
+    font-size: 0.5rem;
+  }
+
+  .titulo-card{
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+  }
+   h1 {
+    font-size: 1rem;
+    text-align: center;
+   }
+   .ticket {
+    display: block;
+    position: relative;
+    float: left;
+  }
+  .contenedor-ticket{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    isolation: isolate;
+    top: 0;
+    left: 0;
+  }
+  .pic2{
+    max-width: 100%;
+
+  }
+  .titulo-user{
+    position: absolute;
+    top: 13%;
+    left: 8%;
+    color: #f9f9f9;
+    font-size: 0.7rem;
+  }
+  .titulo-user1{
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    color: #f9f9f9;
+    font-size: 0.9rem;
+  }
+  
+  .titulo-album{
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    color: #f9f9f9;
+    font-size: 0.8rem;
+  }
+  .titulo-album1{
+    position: absolute;
+    top: 70%;
+    left: -4%;
+    color: #f9f9f9;
+    font-size: 0.75rem;
+  }
+  .titulo-song {
+    position: absolute;
+    top: 45%;
+    left: 8%;
+    color: #f9f9f9;
+    font-size: 0.8rem;
+  }
+  .titulo-song1 {
+    top: 70%;
+    left: -1%;
+    color: #f9f9f9;
+    font-size: 0.7rem;
+  }
+  .pic3{
+    position: absolute;
+    top: 13%;
+    width: 130px;
+    height: 130px;
+    left: 72%;
+    border-radius: 20px;
+  }
+  .boton1 {
+    width: 50%;
+    height: 50px;
+  }
+  .boton2 {
+    bottom: 15px;
+    width: 50%;
+    height: 50px;
+  }
+}
+
 
