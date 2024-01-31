@@ -1,8 +1,11 @@
-
-body {
-    font-family: 'Flubber', sans-serif;
-    color: rgb(252, 252, 252);
-    -webkit-tap-highlight-color: transparent;
-}
-
-
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+[class*="app"], 
+main {
+    width: min(95%, 120rem);
+    margin: 3rem auto;
+  }

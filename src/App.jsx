@@ -1,39 +1,31 @@
-import Formulario from "./components/Formulario"
-import Background from "./components/Background"
-import {Home} from "./components/Home"
-import { useState } from "react"
-import "./index.css"
-
+import Formulario from "./components/Formulario";
+import { Home } from "./components/Home";
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-
-  const [user, setUser] = useState([])
-  const [albu, setAlbu] = useState([])
-  const [song, setSong] = useState([])
+  const [user, setUser] = useState([]);
+  const [albu, setAlbu] = useState([]);
+  const [song, setSong] = useState([]);
 
   return (
-    <>
-    <div className='App'>
-      <Background/>
-
-      {
-        !user.length > 0
-        ? <Formulario 
+    
+      <main className="app">
+        {!user.length > 0 ? (
+          <Formulario setUser={setUser} setAlbu={setAlbu} setSong={setSong} />
+        ) : (
+          <Home
+            user={user}
             setUser={setUser}
+            albu={albu}
             setAlbu={setAlbu}
+            song={song}
             setSong={setSong}
-
-            />
-        : <Home 
-            user={user} setUser={setUser}
-            albu={albu} setAlbu={setAlbu}
-            song={song} setSong={setSong}
-
-            />
-      }
-    </div>
-    </>
-  )
+          />
+        )}
+      </main>
+    
+  );
 }
 
-export default App
+export default App;
