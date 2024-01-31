@@ -1,85 +1,65 @@
-import { useState } from "react"
-import { rolas } from "../Data/rolas"
-import { Filtroalbum } from "./Filtroalbum"
-import hw from "../assets/hw.png"
+import { useState } from "react";
+import { rolas } from "../Data/rolas";
+import { Filtroalbum } from "./Filtroalbum";
+import hw from "../assets/hw.png";
 
+const Formulario = ({ setUser, setAlbu, setSong }) => {
+  const [nombre, setNombre] = useState("");
+  const [album, setAlbum] = useState("");
+  const [cancion, setCancion] = useState("");
+  const [error, setError] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-const Formulario = ({ setUser, setAlbu, setSong}) => {
+    if (nombre === "") {
+      setError(true);
+      return;
+    }
+    setError(false);
 
-
-    const [nombre, setNombre] = useState("")
-    const [album, setAlbum] = useState("")
-    const [cancion, setCancion] = useState("")
-    const [error, setError] = useState(false)
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        if(nombre === ""){
-            setError(true)
-            return
-        }
-        setError(false)
-
-        setUser([nombre])
-        setAlbu([album])
-        setSong([cancion])
-    } 
+    setUser([nombre]);
+    setAlbu([album]);
+    setSong([cancion]);
+  };
   return (
     <div className="contenedor">
-      <div className="formulario">
-      </div>
-        <picture>
-          <img 
-          src={hw}
-          typeof="image/png" 
-          alt="Titulo" 
-          className="pic"
-          />
-        </picture>
-        <div>
-      </div>
-       <div className="username"> 
-           <input 
-              type="text"
-              value={nombre}
-              onChange={e => setNombre(e.target.value)}
-              placeholder="Use your Twitter/X @username"
-              />
-       </div> 
-         <Filtroalbum
-             album={album}
-             setAlbum={setAlbum}
-         />
-        <form
-          onSubmit={handleSubmit}
-          >
-             <div className="username2">
-                <label>Songs</label>
-                      <select 
-                       onChange={e => setCancion(e.target.value)}
-                       value={cancion}
-                      >
-                        <option value="">Choose your favorite Song</option>
-                        {rolas.map(nombre => (
-                          <option
-                           key={nombre.nombre}
-                           value={nombre.nombre}
-                          >
-                            {nombre.nombre}
-                          </option>
-                        ))}
-                      </select>
-              </div>
-              <button
-            >Generate Card</button>
-            
+      <img src={hw} typeof="image/png" alt="Titulo" className="pic" />
+        <div className="username">
+          <input
+            type="text"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+            placeholder="Use your Twitter/X @username"
+          /></div>
+        <form onSubmit={handleSubmit}>
+          
+            <Filtroalbum album={album} setAlbum={setAlbum} />
+            <div className="username3">
+            <label>Songs</label>
+            <select
+              onChange={(e) => setCancion(e.target.value)}
+              value={cancion}
+            >
+              <option value="">Choose Your favorite Song</option>
+              {rolas.map((nombre) => (
+                <option key={nombre.nombre} value={nombre.nombre}>
+                  {nombre.nombre}
+                </option>
+              ))}
+            </select>
+           
+          </div>
+          <div className="boton1"> 
+          <button 
+          >Generate Card</button>
+          </div>
         </form>
+        
         {error && <p className="error">All questions must be filled out</p>}
- 
+      
     </div>
-  )
-}
+  );
+};
 
-export default Formulario
+export default Formulario;
