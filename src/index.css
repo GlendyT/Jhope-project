@@ -62,7 +62,7 @@ body {
 .username3 option{
   text-align: center;
 }
-.boton1 button{
+button{
   margin-top: 5%;
   background:rgb(221,27,118);
   color:#fff;
@@ -91,48 +91,64 @@ button:hover{
 /*ESTILOS DE LA CARD*/
 
 .titulo-card{
-  align-items: center;
-  margin-top: -2%;
+  margin-top: -5%;
   font-size: 2rem;
   color: white;
-  cursor: pointer;
   text-transform: uppercase;
   text-align: center;
   font-family: "Single Day", cursive;
-  font-weight: 400;
+  font-weight: 900;
   font-style: normal;
+
 }
 .titulo h1{
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: white;
-  cursor: pointer;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 2%;
+  font-family: "Single Day", cursive;
+  font-weight: 900;
+  font-style: normal;
+
+}
+.titulo h2{
+  font-size: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2%;
+  font-family: "Single Day", cursive;
+  font-weight: 900;
+  font-style: normal;
 
 }
 .contenedor-ticket {
   display: grid;
   grid-template-columns: 3fr 6fr;
-  background-image: url(./assets/5.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./assets/5.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size:contain;
+  object-fit: cover;
   padding:9%;
 }
 .ticket-inside{
-  display: grid;
-  margin-bottom: 16%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
 }
 .titulo-user {
   display: flex;
   align-items: center;
-  font-size:1.5rem;
+  font-size:1.8rem;
   margin-bottom: 11%;
+  color: white;
+  gap: 0.7rem;
+  font-weight:bolder
 }
 .titulo-user .titulo-user1{
-  display: flex;
-  flex-direction: column;
-  font-size:0.9rem;
+  font-size:1.3rem;
   font-family: "Single Day", cursive;
   font-weight: bolder;
   font-style: normal;
@@ -141,20 +157,13 @@ button:hover{
   margin-left: 68%;
   margin-bottom: 6%;
   width:35%;
+  min-height: 1vh;
+  background-size: contain;
 }
-
-
 .boton-container {
-  position: fixed;
-  bottom: 0;
   left: 0;
   width: 100%;
   padding-bottom: 1%;
-  padding-top: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
 }
 .boton-container2 {
@@ -165,40 +174,34 @@ button:hover{
   justify-content: center;
   align-items: center;
   gap: 10%;
-}
+} 
 .boton2 button{
-  display: flex;
-  gap: 20%;
+  display: grid;
   width: fit-content;
   background:rgb(221,27,118);
   color:#fff;
-  border:none;
-  font-size:1.6em;
   cursor:pointer;
   transition:800ms ease all;
-  outline:none;
-  border-radius: 10px;
-  font-weight: bold;
-  padding: 15%;
+  font-size: 1.4em;
+  padding: 11px;
+
 }
 button:hover{
   background:#000000;
   color:rgb(90,190,205) ;
 }
 .boton3 button{
-  display: flex;
-  gap: 10%;
-  width: fit-content;
   background:rgb(221,27,118);
   color:#fff;
   border:none;
-  font-size:1.7em;
-  cursor:pointer;
+  font-size: 1.2em;
+  cursor: pointer;
   transition:800ms ease all;
   outline:none;
   border-radius: 10px;
+  text-align: left;
+  padding: 11px;
   font-weight: bold;
-  padding: 1%;
 }
 button:hover{
   background:#000000;
