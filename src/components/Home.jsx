@@ -1,10 +1,3 @@
-//IMAGENES DE TICKETS
-import card1 from "../assets/1.png";
-import card2 from "../assets/2.png";
-import card3 from "../assets/3.png";
-import card4 from "../assets/4.png";
-import card5 from "../assets/5.png";
-import card6 from "../assets/6.png";
 //IMAGENES DE QR
 import HP1 from "../assets/HOPE-WORLD2.png";
 import jitb1 from "../assets/jitb1.png";
@@ -12,6 +5,8 @@ import jitbhe1 from "../assets/jitbHE1.png";
 //IMPORTS PARA DESCARGAR IMAGEN
 import { useRef } from "react";
 import { toPng } from "html-to-image";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const diccionarioIconos = {
   HopeWorld: HP1,
@@ -20,8 +15,22 @@ const diccionarioIconos = {
 };
 
 export function Home({ user, setUser, albu, song }) {
-  const elementRef = useRef(null);
 
+  const notify = () => {
+    toast.info('🐿️Downloading Your Ticket!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }; 
+
+  //Para descargar la imagen
+  const elementRef = useRef(null);
   const htmlToImageConvert = () => {
     toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
@@ -40,9 +49,10 @@ export function Home({ user, setUser, albu, song }) {
   };
   return (
     <>
-      <div className="titulo-card">HAPPY BIRTHDAY J-HOPE</div>
+      <div className="titulo-card">HAPPY HOBIUARY</div>
       <div className="titulo">
         <h1>Here is your ticket to keep loving and supporting j-hope</h1>
+        <h2>Scan the QR code to find out a Surprise</h2>
       </div>
         <div  className="contenedor-ticket" ref={elementRef}>
           <div className="ticket-inside">
@@ -64,10 +74,14 @@ export function Home({ user, setUser, albu, song }) {
          />
         </div>
 
-      <div className="boton-container"> 
+        <div className="boton-container"> 
       <div className="boton-container2">
       <div className="boton2">
-        <button onClick={htmlToImageConvert}>Download</button>
+        <button onClick={() => {
+          htmlToImageConvert();
+          notify();
+        }}>Download</button>
+        <ToastContainer/>
       </div>
       <div className="boton3">
         <button onClick={handleLogout}>Log Out</button>

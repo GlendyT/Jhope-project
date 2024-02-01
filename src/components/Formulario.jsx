@@ -50,10 +50,10 @@ const Formulario = ({ setUser, setAlbu, setSong }) => {
             </select>
            
           </div>
-          <div className="boton1"> 
-          <button 
+          
+          <button className="button1" 
           >Generate Card</button>
-          </div>
+
         </form>
         
         {error && <p className="error">All questions must be filled out</p>}
