@@ -4,10 +4,12 @@ import jitb1 from "../assets/jitb1.png";
 import jitbhe1 from "../assets/jitbHE1.png";
 import card4 from "../assets/4.png"
 //IMPORTS PARA DESCARGAR IMAGEN
-import { useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { toPng } from "html-to-image";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import { toPng } from "html-to-image";
+import TicketComponent from "./ticketComponent/TicketComponent";
 
 const diccionarioIconos = {
   HopeWorld: HP1,
@@ -15,80 +17,75 @@ const diccionarioIconos = {
   JackInTheBoxHOPEEdition: jitbhe1,
 };
 
+
+const notify = () => {
+  toast.info('🐿️Ticket downloaded!', {
+    position: "top-left",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+};
+
 export function Home({ user, setUser, albu, song }) {
 
-  const notify = () => {
-    toast.info('🐿️Downloading Your Ticket!', {
-      position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      });
-  }; 
+
+  const [imageSaved, setImageSaved] = useState(false);
+
+  useEffect(() => {
+      if(imageSaved) {
+        const timer = setTimeout(() => {
+          notify();
+          setImageSaved(false);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+      }
+  }, [imageSaved]);
 
   //Para descargar la imagen
   const elementRef = useRef(null);
-  const htmlToImageConvert = () => {
+  const htmlToImageConvert = useCallback(() => {
+    if(!elementRef.current) return;
+
     toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
         const link = document.createElement("a");
         link.download = "Hobipalooza";
         link.href = dataUrl;
+
+        link.addEventListener('click', () => {
+          setImageSaved(true); // Set the state to true when the download starts
+        });
+
         link.click();
+        
       })
       .catch((err) => {
         console.log(err);
       });
-  };
+  }, [elementRef]);
 
   const handleLogout = () => {
     setUser({});
   };
   return (
     <>
-      <div className="titulo-card">HAPPY HOBIUARY</div>
-      <div className="titulo">
-        <h1>Here is your ticket to keep loving and supporting j-hope</h1>
-        <h2>Scan the QR code to find out a Surprise</h2>
-      </div>
-        <div  className="contenedor-ticket" ref={elementRef} >
-          <div className="ticket-inside">
-            <div className="titulo-user">
-              Name: <div className="titulo-user1"> {user}</div>
-            </div>
-            <div className="titulo-user">
-              City: <div className="titulo-user1">{albu}</div>
-            </div>
-            <div className="titulo-user">
-              Location: <div className="titulo-user1"> {song}</div>
-            </div>
-          </div>
-          <img
-            src={diccionarioIconos[albu]}
-            typeof="image/png"
-            alt="Card"
-            className="pic3"
-            
-         />
-        </div>
-
-        <div className="boton-container"> 
-      <div className="boton-container2">
-      <div className="boton2">
-        <button onClick={() => {
-          htmlToImageConvert();
-          notify();
-        }}>Download</button>
-        <ToastContainer/>
-      </div>
-      <div className="boton3">
-        <button onClick={handleLogout}>Log Out</button>
-      </div>
-      </div>
+      <div className='ticketContainer' >
+        <TicketComponent
+          user={user}
+          albu={albu}
+          song={song}
+          elementRef={elementRef}
+          handleLogout={handleLogout}
+          htmlToImageConvert={htmlToImageConvert}
+          notify={notify}
+        />
+        <ToastContainer />
       </div>
     </>
   );

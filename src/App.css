@@ -1,5 +1,7 @@
 
 [class*="app"], 
 main {
-    margin: 4rem ;
+    /* margin: 4rem ; */
+    /* width: min(95%, 120rem); */
+    /* margin: 3rem auto; */
   }

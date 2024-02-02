@@ -14,6 +14,7 @@ function App() {
   return (
     <main className="app">
       <Background/>
+
       {!user.length > 0 ? (
         <Formulario setUser={setUser} setAlbu={setAlbu} setSong={setSong} />
       ) : (

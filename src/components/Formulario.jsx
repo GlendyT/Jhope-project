@@ -27,39 +27,40 @@ const Formulario = ({ setUser, setAlbu, setSong }) => {
   return (
     <div className="contenedor">
       <img src={hw} typeof="image/png" alt="Titulo" className="pic" />
-        <div className="username">
-          <input
-            type="text"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
-            placeholder="Use your Twitter/X @username"
-          /></div>
-        <form onSubmit={handleSubmit}>
-          
-            <Filtroalbum album={album} setAlbum={setAlbum} />
-            <div className="username3">
-            <label>Songs</label>
-            <select
-              onChange={(e) => setCancion(e.target.value)}
-              value={cancion}
-            >
-              <option value="">Choose Your favorite Song</option>
-              {rolas.map((nombre) => (
-                <option key={nombre.nombre} value={nombre.nombre}>
-                  {nombre.nombre}
-                </option>
-              ))}
-            </select>
-           
-          </div>
-          
-          <button className="button1" 
-          > Generate Card</button>
+      <div className="username">
+        <input
+          type="text"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+          placeholder="Use your Twitter/X @username"
+        />
+      </div>
+      <form onSubmit={handleSubmit}>
 
-        </form>
-        
-        {error && <p className="error">All questions must be filled out</p>}
-      
+        <Filtroalbum album={album} setAlbum={setAlbum} />
+        <div className="username3">
+          <label>Songs</label>
+          <select
+            onChange={(e) => setCancion(e.target.value)}
+            value={cancion}
+          >
+            <option value="">Choose Your favorite Song</option>
+            {rolas.map((nombre) => (
+              <option key={nombre.nombre} value={nombre.nombre}>
+                {nombre.nombre}
+              </option>
+            ))}
+          </select>
+
+        </div>
+        <div className="boton1">
+          <button
+          >Generate Card</button>
+        </div>
+      </form>
+
+      {error && <p className="error">All questions must be filled out</p>}
+
     </div>
   );
 };
