@@ -2,6 +2,7 @@
 import HP1 from "../assets/HOPE-WORLD2.png";
 import jitb1 from "../assets/jitb1.png";
 import jitbhe1 from "../assets/jitbHE1.png";
+import card4 from "../assets/4.png"
 //IMPORTS PARA DESCARGAR IMAGEN
 import { useRef } from "react";
 import { toPng } from "html-to-image";
@@ -18,7 +19,7 @@ export function Home({ user, setUser, albu, song }) {
 
   const notify = () => {
     toast.info('🐿️Downloading Your Ticket!', {
-      position: "top-right",
+      position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -54,7 +55,7 @@ export function Home({ user, setUser, albu, song }) {
         <h1>Here is your ticket to keep loving and supporting j-hope</h1>
         <h2>Scan the QR code to find out a Surprise</h2>
       </div>
-        <div  className="contenedor-ticket" ref={elementRef}>
+        <div  className="contenedor-ticket" ref={elementRef} >
           <div className="ticket-inside">
             <div className="titulo-user">
               Name: <div className="titulo-user1"> {user}</div>
@@ -71,6 +72,7 @@ export function Home({ user, setUser, albu, song }) {
             typeof="image/png"
             alt="Card"
             className="pic3"
+            
          />
         </div>
 
