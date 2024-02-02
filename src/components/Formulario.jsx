@@ -3,6 +3,8 @@ import { rolas } from "../Data/rolas";
 import { Filtroalbum } from "./Filtroalbum";
 import hw from "../assets/hw.png";
 
+
+
 const Formulario = ({ setUser, setAlbu, setSong }) => {
   const [nombre, setNombre] = useState("");
   const [album, setAlbum] = useState("");
@@ -52,7 +54,7 @@ const Formulario = ({ setUser, setAlbu, setSong }) => {
           </div>
           
           <button className="button1" 
-          >Generate Card</button>
+          > Generate Card</button>
 
         </form>
         

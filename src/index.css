@@ -6,12 +6,33 @@
 }
 body {
   width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(./assets/jhope2.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
+}
+
+.main video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  /* background-color: #000000cc; */
+}
+@media (max-width: 700px) {
+  .shadow-overlay {
+      background-color: rgba(23, 0, 0, 0.7);
+  }
 }
 .contenedor {
   position: absolute;
@@ -132,6 +153,7 @@ button:hover{
   background-size:contain;
   object-fit: cover;
   padding:9%;
+  
 }
 .ticket-inside{
   display: flex;
