@@ -2,7 +2,7 @@
 import HP1 from "../assets/HOPE-WORLD2.png";
 import jitb1 from "../assets/jitb1.png";
 import jitbhe1 from "../assets/jitbHE1.png";
-import card4 from "../assets/4.png"
+import card4 from "../assets/1.png"
 //IMPORTS PARA DESCARGAR IMAGEN
 import { useRef } from "react";
 import { toPng } from "html-to-image";

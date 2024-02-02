@@ -1,6 +1,6 @@
 import React from "react"
 import jhope from "../assets/jhope2.mp4"
-import Hopeworld from "../assets/3.png"
+import Hopeworld from "../assets/bg.jpg"
 
 const Background = () => {
     return (  
