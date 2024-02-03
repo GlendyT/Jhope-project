@@ -9,7 +9,7 @@ export const rolas = [
   { id: "7", nombre: "Safety Zone" },
   { id: "8", nombre: "Future" },
   { id: "9", nombre: "Arson" },
-  { id: "10", nombre: "Equal Sign (Lollapalooza ver." },
+  { id: "10", nombre: "Equal Sign(Lollapalooza ver.)" },
   { id: "11", nombre: "STOP (Lollapalooza ver.)" },
   { id: "12", nombre: "Future (Lollapalooza ver.)" },
   { id: "13", nombre: "MORE (Instrumental)" },
@@ -24,5 +24,5 @@ export const rolas = [
   { id: "22", nombre: "Chicken Noodle Soup" },
   { id: "23", nombre: "on the street" },
   { id: "24", nombre: "HUH?! (feat. j-hope)" },
-  { id: "25", nombre: "Rush Hour (Feat. j-hope of BTS)" },
+  { id: "25", nombre: "Rush Hour (Feat. j-hope of BTS)"},
 ];
