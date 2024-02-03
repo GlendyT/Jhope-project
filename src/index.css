@@ -6,7 +6,6 @@
 }
 body {
   width: 100%;
-
 }
 
 .main video {
@@ -25,7 +24,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: #000000cc; */
 }
 @media (max-width: 700px) {
   .shadow-overlay {
@@ -110,85 +108,85 @@ button:hover{
 /*ESTILOS DE LA CARD*/
 
 .titulo-card{
-  margin-top: -5%;
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: white;
   text-transform: uppercase;
   text-align: center;
   font-family: "Single Day", cursive;
-  font-weight: 900;
+  font-weight: bolder;
   font-style: normal;
 
 }
+
+
 .titulo h1{
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: white;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 2%;
-  font-family: "Single Day", cursive;
+  margin-bottom: 1%;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-style: normal;
-
 }
 .titulo h2{
-  font-size: 1.4rem;
-  color: white;
+  font-size: 1.2rem;
+  color: rgb(207,18,117);
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 2%;
   font-family: "Single Day", cursive;
-  font-weight: 900;
-  font-style: normal;
-
+  font-weight: bolder;
+  cursor: pointer;
 }
+
 .contenedor-ticket {
-  display: grid;
-  grid-template-columns: 3fr 6fr;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./assets/2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size:contain;
   object-fit: cover;
-  padding:9%;
-  
+  display: flex;
+  flex-direction:row;
+  padding: 4.8rem;
 }
 .ticket-inside{
-  display: flex;
   flex-direction: column;
-  margin-bottom: 10%;
+  display: flex;
+  gap: 1rem;
+  width: 80%;
 }
 .titulo-user {
   display: flex;
-  align-items: center;
+  gap: 1rem;
+  row-gap: 1rem;
+  column-gap: 0.5rem;
   font-size:1.8rem;
-  margin-bottom: 11%;
   color: white;
-  gap: 0.7rem;
-  font-weight:bolder
+  font-family: "Single Day", cursive;
+  font-weight: 500;
+  text-align: center;
 }
-.titulo-user .titulo-user1{
-  font-size:1.3rem;
+.titulo-user1{  
+  font-size:2rem;
+  color: white;
   font-family: "Single Day", cursive;
   font-weight: bolder;
-  font-style: normal;
 }
+
 .pic3 {
-  margin-left: 68%;
-  margin-bottom: 6%;
-  width:35%;
-  min-height: 1vh;
-  background-size: contain;
+  margin: 5%;
+  max-width: 18%;
+  height:fit-content;
+  -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+  box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
 }
+
 .boton-container {
   left: 0;
   width: 100%;
-  padding-bottom: 1%;
-
 }
 .boton-container2 {
   width: 100%;
-  padding: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;

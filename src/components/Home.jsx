@@ -58,13 +58,13 @@ export function Home({ user, setUser, albu, song }) {
         <div  className="contenedor-ticket" ref={elementRef} >
           <div className="ticket-inside">
             <div className="titulo-user">
-              Name: <div className="titulo-user1"> {user}</div>
+              Name: <div className="titulo-user1">{user}</div>
             </div>
             <div className="titulo-user">
               City: <div className="titulo-user1">{albu}</div>
             </div>
             <div className="titulo-user">
-              Location: <div className="titulo-user1"> {song}</div>
+              Location: <div className="titulo-user1">{song}</div>
             </div>
           </div>
           <img
@@ -72,7 +72,6 @@ export function Home({ user, setUser, albu, song }) {
             typeof="image/png"
             alt="Card"
             className="pic3"
-            
          />
         </div>
 
