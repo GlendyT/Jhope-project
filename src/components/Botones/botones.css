@@ -1,0 +1,38 @@
+
+
+.btnContainer {
+  display: flex;
+  /* background-color: orange; */
+  width: 100%;
+  justify-content: center;
+  column-gap: 5%;
+  position: relative;
+  padding: 2%;
+
+
+  @media screen and (min-width: 768px){
+    padding: 0;
+    /* background-color: blue; */
+
+  }
+}
+.button {
+  margin-top: 1%; 
+  background:rgb(221,27,118);
+  color:#fff;
+  border:none;
+  position:relative;
+  width: 100%;
+  font-size:1.6em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  padding: 1%;
+  border-radius: 10px;
+  font-weight: bold;
+
+   @media screen and (min-width: 768px){
+    width: 15%;
+    padding: 0.5%;
+  }
+}
