@@ -1,5 +1,7 @@
-// import styles from './Botones.module.css';
-import './botones.css'
+// import styles from './Botones.module.css'
+
+import "./botones.css"
+
 
 export default function Botones({ htmlToImageConvert, handleLogout, notify }) {
 
