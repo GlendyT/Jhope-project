@@ -2,7 +2,7 @@
 import HP1 from "../../assets/HOPE-WORLD2.png";
 import jitb1 from "../../assets/jitb1.png";
 import jitbhe1 from "../../assets/jitbHE1.png";
-import Botones from "../botones/Botones";
+import Botones from "../buttonComponent/Botones";
 import "./TicketComponent.css";
 import "./ticketQueries.css"
 //IMPORTS PARA DESCARGAR IMAGEN
