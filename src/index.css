@@ -25,11 +25,7 @@ body {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 700px) {
-  .shadow-overlay {
-      background-color: rgba(23, 0, 0, 0.7);
-  }
-}
+
 .contenedor {
   position: absolute;
   top: 50%;
@@ -38,6 +34,7 @@ body {
   padding: 3%;
   margin-top: 5%;
 }
+
 .pic {
   position: absolute;
   top: -58%;
@@ -46,10 +43,25 @@ body {
   padding-bottom: 6%;
   object-fit: contain;
 }
+@media screen and (min-width: 412px){
+  .pic{
+    position: absolute;
+    width: 99%;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 375px){
+  .pic{
+    position: absolute;
+    width: 99%;
+    padding: 1rem;
+  }
+}
 .username{
   display: flex;
   flex-direction: column;
 }
+
 .username input{
   width: 100%;
   text-align: center;
@@ -77,6 +89,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
+
 .username3 option{
   text-align: center;
 }
@@ -94,6 +107,17 @@ button{
   padding: 3%;
   border-radius: 10px;
   font-weight: bold;
+}
+@media screen and (min-width: 412px){
+  button{
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 375px){
+  button{
+    font-size: 85%;
+    padding: 5%;
+  }
 }
 
 button:hover{
@@ -120,99 +144,3 @@ button:hover{
   gap: 10%;
 } 
 
-/*MEDIA QUERIES
-@media screen and (min-width: 375px){
-  .username input{
-    width: 100%;
-    text-align: center;
-    font-size: 65%;
-    padding: 3%;
-    border-color: black;
-    border-radius: 10px;
-  }
-  
-  .username3{
-    box-sizing: border-box;
-    margin-bottom: 1.5%;
-  }
-  .username3 label{
-    color: #0a0606;
-    font-size: 100%;
-    font-weight: bold;
-    visibility: hidden;
-  }
-  .username3 select{
-    width: 100%;
-    background: white;
-    padding: 3%;
-    font-size: 65%;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  .username3 option{
-    text-align: center;
-  }
-  button{
-    margin-top: 5%;
-    background:rgb(221,27,118);
-    color:#fff;
-    border:none;
-    position:relative;
-    width: 100%;
-    font-size:1.2em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-    padding: 3%;
-    border-radius: 10px;
-    font-weight: bold;
-  }
-  
-  button:hover{
-    background:#000000;
-    color:rgb(90,190,205) ;
-  }
-  .error {
-    color: red;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  .titulo-card{
-    font-size: 2.5rem;
-  }
-  .titulo h1{
-    font-size: 1rem;
-  }
-  .titulo h2{
-    font-size: 1.1rem;
-    margin-bottom: 30%;
-  }
-  .contenedor-ticket {
-    padding: 1.9rem;
-  }
-  .ticket-inside{
-    flex-direction: column;
-    display: flex;
-    width: 80%;
-    gap: 2%;
-  }
-  
-  .titulo-user {
-    display: flex;
-    column-gap: 0.5rem;
-    font-size:0.5rem;
-  }
-  .titulo-user1{  
-    font-size:0.7rem;
-  }
-  
-  .pic3 {
-    margin: 4%;
-    max-width: 18%;
-    height:fit-content;
-    -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
-    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
-  }
-} */
