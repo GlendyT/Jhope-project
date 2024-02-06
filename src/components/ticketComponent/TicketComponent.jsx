@@ -2,7 +2,7 @@
 import HP1 from "../../assets/HOPE-WORLD2.png";
 import jitb1 from "../../assets/jitb1.png";
 import jitbhe1 from "../../assets/jitbHE1.png";
-import { TituloComponent } from "../tituloComponente/tituloComponent";
+import { TituloC } from "../tituloComponente/TituloC";
 import Botones from "../buttonComponent/Botones";
 import "./ticketComponent.css"
 import "./ticketQueries.css"
@@ -24,7 +24,7 @@ export default function TicketComponent({
 }) {
   return (
     <>
-    <TituloComponent/>
+    <TituloC/>
     <div className="codigoQR">Don´t forget to scan your QR code for a surprise!</div>
                 <div className="contenedor-ticket" ref={elementRef} >
                 <div className="ticket-inside" >
