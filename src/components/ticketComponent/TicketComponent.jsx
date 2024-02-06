@@ -2,7 +2,7 @@
 import HP1 from "../../assets/HOPE-WORLD2.png";
 import jitb1 from "../../assets/jitb1.png";
 import jitbhe1 from "../../assets/jitbHE1.png";
-import { TituloComponent } from "../../tituloComponente/tituloComponent";
+import { TituloComponent } from "../tituloComponente/tituloComponent";
 import Botones from "../buttonComponent/Botones";
 import "./ticketComponent.css"
 import "./ticketQueries.css"
