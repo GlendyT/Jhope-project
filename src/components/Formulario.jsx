@@ -14,7 +14,7 @@ const Formulario = ({ setUser, setAlbu, setSong }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (nombre === "") {
+    if (nombre === "", album === "" || cancion === "") {
       setError(true);
       return;
     }
@@ -53,7 +53,7 @@ const Formulario = ({ setUser, setAlbu, setSong }) => {
            
           </div>
           
-          <button className="button1" 
+          <button className="button3" 
           > Generate Card</button>
 
         </form>

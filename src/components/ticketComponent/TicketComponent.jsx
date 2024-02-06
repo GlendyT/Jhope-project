@@ -2,6 +2,7 @@
 import HP1 from "../../assets/HOPE-WORLD2.png";
 import jitb1 from "../../assets/jitb1.png";
 import jitbhe1 from "../../assets/jitbHE1.png";
+import { TituloComponent } from "../../tituloComponente/tituloComponent";
 import Botones from "../buttonComponent/Botones";
 import "./ticketComponent.css"
 import "./ticketQueries.css"
@@ -23,13 +24,10 @@ export default function TicketComponent({
 }) {
   return (
     <>
-        <div className="titulo-card">HAPPY HOBIUARY</div>
-        <div className="titulo">
-          <h1>Here is your ticket to keep loving and supporting j-hope</h1>
-          <h2>Scan the QR code to find out a Surprise</h2>
-        </div>
-                <div className="contenedor-ticket" ref={elementRef}>
-                <div className="ticket-inside">
+    <TituloComponent/>
+    <div className="codigoQR">Don´t forget to scan your QR code for a surprise!</div>
+                <div className="contenedor-ticket" ref={elementRef} >
+                <div className="ticket-inside" >
                   <div className="titulo-user">
                     Name: <div className="titulo-user1">{user}</div>
                   </div>
@@ -48,8 +46,9 @@ export default function TicketComponent({
                 />
               </div>
             )
+            <div className="ticketname">Here is your ticket, Keep Supporting j-hope´s work!</div>
             <Botones htmlToImageConvert={htmlToImageConvert} handleLogout={handleLogout} notify={notify}/>
-
+            
     </>
   );
 }

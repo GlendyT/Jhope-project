@@ -20,7 +20,7 @@ const diccionarioIconos = {
   const notify = () => {
     toast.info('🐿️Downloading Your Ticket!', {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
