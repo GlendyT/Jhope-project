@@ -11,7 +11,7 @@ export default function Botones({ htmlToImageConvert, handleLogout, notify }) {
   }
   return (
     <div className='btnContainer'>
-      <button className='button' onClick={handleDownload}>Download</button>
+      <button className='button1' onClick={handleDownload}>Download</button>
       <button className='button' onClick={handleLogout}>Log Out</button>
     </div>
   )

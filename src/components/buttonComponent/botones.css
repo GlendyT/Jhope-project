@@ -1,8 +1,6 @@
-
-
+/* Animation property */
 .btnContainer {
   display: flex;
-  /* background-color: orange; */
   width: 100%;
   justify-content: center;
   column-gap: 5%;
@@ -15,7 +13,7 @@
     /* background-color: blue; */
 
   }
-}
+} 
 .button {
   margin-top: 1%; 
   background:rgb(221,27,118);
@@ -23,7 +21,7 @@
   border:none;
   position:relative;
   width: 100%;
-  font-size:1.6em;
+  font-size:1.5em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
@@ -35,4 +33,45 @@
     width: 15%;
     padding: 0.5%;
   }
+} 
+.button1{
+  animation: wiggle 1.5s linear infinite;
+  margin-top: 1%;
+  border: none;
+  width: 100%;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 3%;
+  font-weight: bold;
+
+  @media screen and (min-width: 768px){
+    width: 15%;
+    padding: 0.5%;
+  }
 }
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
