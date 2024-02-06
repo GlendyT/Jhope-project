@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Cute+Font&family=Frijole&family=Gloria+Hallelujah&family=Monoton&family=Permanent+Marker&family=Rock+Salt&family=Rubik+Lines&family=Titan+One&display=swap");
 /*
-font-family: "Permanent Marker", cursive;
  font-family: "Titan One", sans-serif;
    font-family: "Rubik Lines", system-ui;
      font-family: "Monoton", sans-serif;
        font-family: "Rock Salt", cursive;
          font-family: "Frijole", system-ui;
 */
+.container-fluid{
+  margin-top: 15%;
+}
 .titulo-card{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: white;
     text-transform: uppercase;
     text-align: center;
@@ -17,23 +19,20 @@ font-family: "Permanent Marker", cursive;
     font-weight: bold;
   }
   .contenedor-ticket {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/src/assets/1.png);
+    background-image:url(/src/assets/2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size:contain;
-    object-fit: cover;
-    display: flex;
-    flex-direction:row;
-    padding: 4rem;
+    padding-top: 7%;
+    padding-bottom: 13%;
+    padding-left: 15%;
+    object-fit: contain;
   }  
 
   .ticket-inside{
     flex-direction: column;
     display: flex;
     gap: 1rem;
-    margin-left: 8%;
-    width:65%;
-    margin-bottom: 8%;
   }
   .titulo-user {
     display: flex;
@@ -41,40 +40,30 @@ font-family: "Permanent Marker", cursive;
     row-gap: 1rem;
     column-gap: 0.5rem;
     font-size:1rem;
-    font-family: "Monoton", sans-serif;
     color: white;
     font-weight: 500;
-    text-align: center;
+    font-family: "Monoton", sans-serif;
   }
   .titulo-user1{  
-    font-size:1.5rem;
+    font-size:1.65rem;
     color: white;
-    font-family: "Permanent Marker", cursive;
-    font-weight: 100;
-  }
-  .pic3 {
-    margin-left: -2%;
-    max-width: 20%;
-    height:fit-content;
-    -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
-    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
+    
   }
   .codigoQR {
     text-align: center;
     color:rgb(90,190,205) ;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: "Monoton", sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: rgb(5, 6, 6);
+    margin-bottom: 2%;
   }
   .ticketname {
     text-align: center;
     color:rgb(221,27,118); 
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: "Monoton", sans-serif;   
-
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: rgb(5, 6, 6);
   }
   
