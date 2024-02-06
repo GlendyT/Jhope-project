@@ -1,6 +1,6 @@
 import "./titulostyles.css";
 
-export const TituloComponent = () => {
+export const TituloC = () => {
   return (
     <>
       <div className="titulo-card">HAPPY</div>
