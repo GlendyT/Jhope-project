@@ -21,7 +21,7 @@
   border:none;
   position:relative;
   width: 100%;
-  font-size:1.5em;
+  font-size:1.2em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
@@ -39,7 +39,7 @@
   margin-top: 1%;
   border: none;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.2em;
   cursor: pointer;
   padding: 3%;
   font-weight: bold;

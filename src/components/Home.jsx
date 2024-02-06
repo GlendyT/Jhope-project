@@ -1,7 +1,4 @@
 //IMAGENES DE QR
-import HP1 from "../assets/HOPE-WORLD2.png";
-import jitb1 from "../assets/jitb1.png";
-import jitbhe1 from "../assets/jitbHE1.png";
 import card4 from "../assets/1.png"
 //IMPORTS PARA DESCARGAR IMAGEN
 import { useCallback, useRef, useEffect, useState  } from "react";
@@ -10,12 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TicketComponent from "./ticketComponent/TicketComponent";
 
-
-const diccionarioIconos = {
-  HopeWorld: HP1,
-  JackInTheBox: jitb1,
-  JackInTheBoxHOPEEdition: jitbhe1,
-};
 
   const notify = () => {
     toast.info('🐿️Downloading Your Ticket!', {

@@ -7,7 +7,7 @@ export const TituloC = () => {
       <div className="conteudo">
         <ul>
           <li>HOPE-DAY!</li>
-          <li>HOBIPALLOOZA!</li>
+          <li>HOBIPALOOZA!</li>
           <li>HOSEOK!</li>
           <li>HOBI-DAY!</li>
           <li>j-hope!</li>
